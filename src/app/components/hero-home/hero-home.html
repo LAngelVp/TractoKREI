@@ -1,0 +1,30 @@
+<section class="relative w-full h-dvh flex flex-col items-center justify-center bg-black">
+    @if(mostrarTexto){
+    <h1 class="flex text-[2.8rem] md:text-[4.5rem] lg:text-[5.5rem] saira font-bold dark transition-all duration-1000 desvanecer" 
+        [ngClass]="{ 
+        'opacity-100 visible': mostrarTexto, 
+        'opacity-0 invisible': !mostrarTexto 
+        }">
+    <span class="typewriter-text text-white">{{texto_principal}}</span>
+    </h1>
+    }
+
+    <!-- Logo (aparece después con animación) -->
+    <div class="animacion" [ngClass]="{ 'hidden': !mostrarLogo }">
+    <img [src]="logotipo" [alt]="texto_alternativo_logo" class="sombra_imagen">
+    </div>
+    <div class="flex items-center gap-4">
+        <div [ngClass]="{ 
+              'opacity-0': !mostrarTexto2, 
+              'opacity-100': mostrarTexto2
+            }" class="flex gap-4">
+            <p class="flex text-[1.3rem] md:text-[1.8rem] lg:text-[2rem] xl:text-[2.2rem] saira font-bold dark"
+            >
+                <span [ngClass]="{'typewriter-text': mostrarTexto2, 'text-white': mostrarTexto2}">{{eslogan}} </span>  
+            </p>
+        </div>
+        <div class="flex items-center">
+            <span [ngClass]="{'opacity-100': mostrarLoader, 'opacity-0': !mostrarLoader}" class="loader transition-opacity duration-1000 ease-in-out w-[28px] h-[30px] md:w-[30px] md:h-[35px] lg:w-[33px] lg:h-[38px] xl:w-[38px] xl:h-[42px]"></span>
+        </div>
+    </div>
+</section>
