@@ -3,6 +3,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-hero-home',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './hero-home.html',
   styleUrl: './hero-home.css',
@@ -29,6 +30,12 @@ export class HeroHome {
       this.cdRef.detectChanges();
       console.log("Mostrando texto: PROXIMAMENTE");
     }, 0);
+
+    setTimeout(() => {
+      this.mostrarLoader = false;
+      this.cdRef.detectChanges();
+      console.log("Ocultando loader");
+    }, 7000);
     
     // 2. Después de 6 segundos: ocultar texto
     setTimeout(() => {

@@ -23,8 +23,8 @@
                 <span [ngClass]="{'typewriter-text': mostrarTexto2, 'text-white': mostrarTexto2}">{{eslogan}} </span>  
             </p>
         </div>
-        <div class="flex items-center">
-            <span [ngClass]="{'opacity-100': mostrarLoader, 'opacity-0': !mostrarLoader}" class="loader transition-opacity duration-1000 ease-in-out w-[28px] h-[30px] md:w-[30px] md:h-[35px] lg:w-[33px] lg:h-[38px] xl:w-[38px] xl:h-[42px]"></span>
+        <div [ngClass]="{'opacity-100': mostrarLoader, 'opacity-0': !mostrarLoader}" class="flex items-center">
+            <span class="loader transition-opacity duration-1000 ease-in-out w-[28px] h-[30px] md:w-[30px] md:h-[35px] lg:w-[33px] lg:h-[38px] xl:w-[38px] xl:h-[42px]"></span>
         </div>
     </div>
 </section>
