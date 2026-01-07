@@ -8,11 +8,11 @@ export const routes: Routes = [
         component: HeroHome
     },
     {
-    path: 'not-found',  // ← Sin barra inicial
+    path: 'not-found',
     component: NotFound
     },
     {
         path: '**',
-        redirectTo: 'not-found'  // ← Tampoco barra aquí
+        redirectTo: 'not-found'
     }
 ];
